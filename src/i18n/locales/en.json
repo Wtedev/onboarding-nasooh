@@ -1,0 +1,168 @@
+{
+  "brand": "Nasouh",
+  "skip": "I know the app, skip",
+  "back": "Back",
+  "langToggle": "العربية",
+  "langToggleAria": "Switch to Arabic",
+  "skipAria": "Skip onboarding",
+  "backAria": "Go to previous stage",
+  "progressAria": "Stage {{current}} of {{total}}",
+  "placeholder": {
+    "text": "Just a design preview here — the real app would take you straight into this section.",
+    "back": "Back to the first screen"
+  },
+  "stages": {
+    "containment": {
+      "line1": "Your safe space",
+      "line2Lead": "Between you..",
+      "line2Tail": " and someone who understands you",
+      "line2": "Between you.. and someone who understands you",
+      "cta": "Tour Nasouh",
+      "cards": {
+        "tooHeavy": {
+          "feeling": "Everything feels heavy",
+          "support": "Let’s carry it together"
+        },
+        "exploding": {
+          "feeling": "I feel like I’ll explode",
+          "support": "I’m with you… are you safe?"
+        },
+        "cantSay": {
+          "feeling": "I have so much to say but can’t",
+          "support": "Speak freely—I’m listening"
+        },
+        "drained": {
+          "feeling": "I’m completely drained",
+          "support": "You’re allowed to stop and rest"
+        },
+        "wantPause": {
+          "feeling": "I want the world to pause",
+          "support": "Take a break… I’m with you"
+        },
+        "tightChest": {
+          "feeling": "My chest feels tight",
+          "support": "What’s weighing on you most?"
+        },
+        "innerHurt": {
+          "feeling": "Everything inside hurts",
+          "support": "Your pain is real—you’re not alone"
+        },
+        "tooBig": {
+          "feeling": "I’m carrying more than I can",
+          "support": "You don’t have to carry it alone"
+        },
+        "needVent": {
+          "feeling": "I need to vent",
+          "support": "Take your time… I’m listening"
+        },
+        "nothingMatters": {
+          "feeling": "Even what I love doesn’t matter now",
+          "support": "How long have you felt this way?"
+        }
+      }
+    },
+    "solidarity": {
+      "title": "You’re not alone even if it feels that way",
+      "description": "Someone may feel like you, may have walked a similar path, and may be able to understand you.",
+      "cta": "Discover what fits",
+      "labels": {
+        "trying": "I’m trying to get through",
+        "missing": "I miss someone",
+        "attachmentTired": "I’m tired of clinging",
+        "dontKnow": "I don’t know what I want",
+        "needTalk": "I need to talk",
+        "returnSelf": "I’m trying to return to myself"
+      }
+    },
+    "services": {
+      "title": "Whatever you need… there’s a start that fits",
+      "cta": "Start with Nasouh",
+      "next": "Next",
+      "tabs": {
+        "sessions": "Session",
+        "assessment": "Assess",
+        "courses": "Learn",
+        "companion": "Nasouh"
+      },
+      "sessions": {
+        "title": "Talk with someone who understands",
+        "description": "Voice or video sessions with a specialist who helps you understand your feelings and take steps that fit you.",
+        "name": "Dr. Mohammed Saleh",
+        "role": "Cognitive Behavioral Consultant",
+        "private": "Private session",
+        "speakingNow": "Speaking now...",
+        "actions": {
+          "mute": "Mute",
+          "speaker": "Speaker",
+          "end": "End"
+        },
+        "doctor": {
+          "name": "Dr. Mohammed Saleh",
+          "role": "Cognitive Behavioral Consultant",
+          "rating": "4.8",
+          "price": "125",
+          "duration": "30 min",
+          "patients": "Patients",
+          "patientsValue": "1.5K",
+          "experience": "Experience",
+          "experienceValue": "12 yrs",
+          "availability": "Next available",
+          "availabilityValue": "Today"
+        }
+      },
+      "assessment": {
+        "title": "Understand what’s happening inside",
+        "description": "Trusted check-ins that help you notice your feelings and patterns affecting you.",
+        "footnote": "Guidance only—to help you choose your next step.",
+        "cards": {
+          "anxiety": { "title": "Anxiety scale", "desc": "Notice how anxiety shows up in your day" },
+          "mood": { "title": "Mood scale", "desc": "Understand shifts in how you feel and your energy" },
+          "attachment": { "title": "Attachment style", "desc": "See how you relate to closeness, fear, and distance" },
+          "stress": { "title": "Stress scale", "desc": "Notice how much pressure you’re carrying lately" }
+        },
+        "minutes": "{{count}} min",
+        "questions": "{{count}} questions"
+      },
+      "courses": {
+        "title": "Learn how to care for yourself",
+        "description": "Specialized content to help you organize feelings, understand behavior, and build steadier habits.",
+        "cards": {
+          "self": { "title": "Returning to yourself", "desc": "Steps to regain focus and energy beyond others" },
+          "attachment": { "title": "Understanding attachment", "desc": "Understand clinging and build a safer bond with yourself" },
+          "heavy": { "title": "Heavy days", "desc": "Simple tools when energy drops and feelings tangle" },
+          "boundaries": { "title": "Boundaries that protect", "desc": "Express needs and set healthy limits without isolation" },
+          "sleep": { "title": "Sleep that settles you", "desc": "Simple habits to quiet body and mind before rest" },
+          "calm": { "title": "Calm anxiety in the body", "desc": "Short practices that ease tension and restore safety" },
+          "kindness": { "title": "Kindness toward yourself", "desc": "Learn to meet yourself with care instead of blame" }
+        },
+        "lessons": "{{count}} lessons",
+        "minutes": "{{count}} min"
+      },
+      "companion": {
+        "title": "Don’t face your heavy days alone",
+        "description": "Talk with Nasouh by text or voice anytime—take your space without rush.",
+        "badge": "Available 24/7",
+        "draft1": "I feel like..",
+        "draft2": "I don’t know how to explain..",
+        "draft3": "I have so much I want to say",
+        "typing": "Nasouh is typing...",
+        "reply": "Don’t worry, I’m with you. Share your feelings as they are—no need to arrange them.",
+        "chips": {
+          "upset": "Something upset me",
+          "alone": "I feel alone",
+          "vent": "I just need to vent"
+        }
+      }
+    },
+    "choice": {
+      "title": "What would lighten things most?",
+      "explore": "I’d rather explore the app",
+      "options": {
+        "vent": { "title": "I want to vent", "desc": "Nasouh listens" },
+        "calm": { "title": "I want to settle my feelings", "desc": "Quick calm" },
+        "understand": { "title": "I want to understand myself", "desc": "Short check-in" },
+        "specialist": { "title": "I need a real person", "desc": "Private session" }
+      }
+    }
+  }
+}

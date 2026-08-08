@@ -1,0 +1,201 @@
+@import 'tailwindcss';
+
+@font-face {
+  font-family: 'Lama Sans';
+  src: url('/fonts/LamaSans-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lama Sans';
+  src: url('/fonts/LamaSans-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lama Sans';
+  src: url('/fonts/LamaSans-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --color-nasouh-bg: #edf3fd;
+  --color-nasouh-ink: #1f2125;
+  --color-nasouh-purple: #9167ff;
+  --color-nasouh-indigo: #7b52f0;
+  --color-nasouh-teal: #63d9f4;
+  --color-nasouh-pink: #ff86b7;
+  --font-arabic: 'Lama Sans', sans-serif;
+  --font-latin: 'Lama Sans', sans-serif;
+  --breakpoint-short: 640px;
+}
+
+@custom-variant short (@media (max-height: 640px));
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  height: 100%;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  height: 100%;
+  min-height: 100dvh;
+  width: 100%;
+  overflow-x: hidden;
+  background: #edf3fd;
+  color: var(--color-nasouh-ink);
+}
+
+body {
+  font-family: 'Lama Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html[lang='ar'] body {
+  font-family: 'Lama Sans', sans-serif;
+}
+
+/* Layered (not global) so Tailwind's utilities layer — which loads after
+   base — can still override font-size/weight on individual buttons. Left
+   unlayered, this unconditionally wins over every text-[…] utility on a
+   <button>, no matter its specificity. */
+@layer base {
+  button {
+    font: inherit;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid #9167ff;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.nasouh-app {
+  background: #edf3fd;
+}
+
+.nasouh-stage {
+  background: transparent;
+}
+
+.nasouh-swiper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.nasouh-swiper .swiper-wrapper {
+  height: 100%;
+  align-items: stretch;
+}
+
+.nasouh-swiper .swiper-slide {
+  height: 100% !important;
+  display: flex;
+  flex-direction: column;
+}
+
+/* CTA — #9167ff, very soft lighter wash, no frames */
+.nasouh-cta {
+  position: relative;
+  overflow: hidden;
+  background: #9167ff;
+  border: none;
+  box-shadow: none;
+}
+
+.nasouh-cta:hover {
+  filter: brightness(1.03);
+}
+
+.nasouh-cta:active {
+  filter: brightness(0.97);
+}
+
+/* Soft typing caret — visible during pauses */
+@keyframes nasouh-caret-blink {
+  0%,
+  45% {
+    opacity: 0.75;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.nasouh-caret {
+  animation: nasouh-caret-blink 1.05s steps(1, end) infinite;
+}
+
+/* Infinite horizontal course topics marquee */
+@keyframes nasouh-courses-marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+/* Opposite direction; starts at 0 so the first card stays fully visible during the 1s hold */
+@keyframes nasouh-courses-marquee-rtl {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(50%, 0, 0);
+  }
+}
+
+.nasouh-courses-marquee {
+  display: flex;
+  width: max-content;
+  gap: 12px;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+}
+
+.nasouh-courses-marquee.is-running {
+  /* 1s hold after enter, then infinite slide */
+  animation: nasouh-courses-marquee 24s linear 1s infinite;
+}
+
+.nasouh-courses-marquee.nasouh-courses-marquee-rtl.is-running {
+  animation-name: nasouh-courses-marquee-rtl;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nasouh-courses-marquee.is-running,
+  .nasouh-courses-marquee-rtl.is-running {
+    animation: none !important;
+  }
+}
