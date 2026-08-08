@@ -27,15 +27,6 @@ const GLOW: Record<FallingVariant, [string, string]> = {
   cream: ['#FFE9B0', '#FFF2CC'],
 }
 
-const SUPPORT: Record<FallingVariant, string> = {
-  peach: '#C4A99E',
-  mint: '#9AAA78',
-  lilac: '#9B87D4',
-  sky: '#7A9CC8',
-  rose: '#C48AA8',
-  cream: '#B8A078',
-}
-
 function Face({ kind, cx, cy }: { kind: FallingFace; cx: number; cy: number }) {
   const s = 0.78
   if (kind === 'sad') {
@@ -154,6 +145,7 @@ export function MoodCardVisual({
 
       <foreignObject x={textX} y="12" width={textW} height={CARD_H - 24}>
         <div
+          // @ts-expect-error xmlns is valid for foreignObject HTML hosts
           xmlns="http://www.w3.org/1999/xhtml"
           style={{
             height: '100%',
