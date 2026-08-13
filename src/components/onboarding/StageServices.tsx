@@ -9,8 +9,9 @@ import {
 } from '../../data/onboardingContent'
 import { useTypingTimeline, type TypingStep } from '../../hooks/useTypingTimeline'
 import { SpecialistDoctorCard } from './SpecialistDoctorCard'
-import { NasouhAiLogo } from './NasouhAiLogo'
 import doctorPhoto from '../../assets/sessions/dr-mohammed.png'
+import nasouhExcited from '../../assets/nasouh-moods/excited.svg'
+import nasouhOriginal from '../../assets/nasouh-moods/original.svg'
 
 interface ServiceSlideProps {
   tab: ServiceTab
@@ -690,10 +691,11 @@ function CompanionPanel({ active }: { active: boolean }) {
 
   return (
     <div className="flex h-full flex-col items-center justify-center gap-2 text-center">
-      <NasouhAiLogo
-        variant="color"
+      <img
+        src={nasouhExcited}
         alt={t('brand')}
-        className="h-9 w-auto select-none"
+        className="h-[88px] w-auto select-none object-contain"
+        draggable={false}
       />
       <span className="rounded-full bg-[#8f83ff]/12 px-2.5 py-1 text-[10px] font-medium text-[#8f83ff]">
         {t('stages.services.companion.badge')}
@@ -723,15 +725,12 @@ function CompanionPanel({ active }: { active: boolean }) {
             }
             aria-hidden
           >
-            <div
-              className="flex h-5 w-5 shrink-0 items-center justify-center overflow-hidden rounded-full"
-              style={{ background: '#8f83ff' }}
-            >
-              <NasouhAiLogo
-                variant="white"
-                className="h-[9px] w-auto max-w-[14px] object-contain"
-              />
-            </div>
+            <img
+              src={nasouhOriginal}
+              alt=""
+              className="h-6 w-6 shrink-0 object-contain"
+              draggable={false}
+            />
             <div className="flex items-center gap-1 px-0.5">
               {[0, 1, 2].map((i) => (
                 <motion.span
@@ -756,19 +755,16 @@ function CompanionPanel({ active }: { active: boolean }) {
 
         {reply && (
           <div className="flex w-full items-end gap-2">
-            <motion.div
-              className="flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-full"
-              style={{ background: '#8f83ff' }}
+            <motion.img
+              src={nasouhOriginal}
+              alt=""
+              className="h-10 w-10 shrink-0 object-contain"
+              draggable={false}
               initial={reduced ? false : { opacity: 0, scale: 0.6 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.35, ease: softSettleEase }}
               aria-hidden
-            >
-              <NasouhAiLogo
-                variant="white"
-                className="h-[15px] w-auto max-w-[22px] object-contain"
-              />
-            </motion.div>
+            />
             <motion.p
               className="max-w-[68%] rounded-2xl rounded-br-md px-3.5 py-2.5 text-start text-[12px] leading-relaxed text-white"
               style={{ background: '#8f83ff' }}
