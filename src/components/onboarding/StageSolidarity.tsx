@@ -11,8 +11,8 @@ interface StageSolidarityProps {
 const CX = 100
 const CY = 92
 const GLOBE_R = 52
-/** Dark purple — matched to reference orbits */
-const ORBIT = '#43368E'
+/** Brand purple — matched to #8f83ff system */
+const ORBIT = '#8f83ff'
 const ORBIT_STROKE = 0.4
 
 /**
