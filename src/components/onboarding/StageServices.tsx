@@ -77,7 +77,7 @@ function CallWaveform() {
       {Array.from({ length: 10 }, (_, i) => (
         <motion.span
           key={i}
-          className="w-[2.5px] rounded-full bg-[#9167ff]"
+          className="w-[2.5px] rounded-full bg-[#8f83ff]"
           animate={{ height: [5, 10 + (i % 3) * 2, 5] }}
           transition={{
             duration: 1.5 + (i % 4) * 0.15,
@@ -95,7 +95,7 @@ const GLASS_CARD = {
   background:
     'linear-gradient(145deg, rgba(255,255,255,0.82), rgba(237,243,253,0.55))',
   border: '1px solid rgba(255,255,255,0.5)',
-  boxShadow: '0 10px 24px -14px rgba(145,103,255,0.3)',
+  boxShadow: '0 10px 24px -14px rgba(143,131,255,0.3)',
 } as const
 
 /** Soft accelerating slide-up for app shells */
@@ -147,7 +147,7 @@ function SessionsPanel() {
   return (
     <div className="flex h-full flex-col items-center justify-center gap-1.5 overflow-y-auto text-center">
       <motion.h2
-        className="text-[22px] font-bold text-[#9167ff]"
+        className="text-[22px] font-bold text-[#8f83ff]"
         {...contentFadeIn(reduced, 0.04)}
       >
         {t('stages.services.sessions.title')}
@@ -175,7 +175,7 @@ function SessionsPanel() {
             <div
               className="relative h-[52px] w-[52px] shrink-0 overflow-hidden rounded-full"
               style={{
-                background: 'linear-gradient(145deg,#71C8F6,#9167ff)',
+                background: 'linear-gradient(145deg,#71C8F6,#8f83ff)',
                 boxShadow: 'inset 0 0 0 2px rgba(255,255,255,0.65)',
               }}
             >
@@ -187,7 +187,7 @@ function SessionsPanel() {
               />
             </div>
             <div className="text-center">
-              <p className="text-[14px] font-bold leading-tight text-[#9167ff]">
+              <p className="text-[14px] font-bold leading-tight text-[#8f83ff]">
                 {t('stages.services.sessions.name')}
               </p>
               <p className="mt-0.5 text-[10px] leading-tight text-[#43368e]">
@@ -197,7 +197,7 @@ function SessionsPanel() {
           </motion.div>
 
           <motion.p
-            className="text-center font-mono text-[22px] font-semibold tracking-wide text-[#9167ff]"
+            className="text-center font-mono text-[22px] font-semibold tracking-wide text-[#8f83ff]"
             {...contentFadeIn(reduced, 0.5)}
           >
             {hh}:{mm}:{ss}
@@ -312,7 +312,7 @@ function AssessmentPanel() {
   return (
     <div className="flex h-full flex-col items-center justify-center gap-2 text-center">
       <motion.h2
-        className="text-[24px] font-bold text-[#9167ff]"
+        className="text-[24px] font-bold text-[#8f83ff]"
         initial={reduced ? false : { opacity: 0, y: 14 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.58, ease: softAccelEase }}
@@ -351,7 +351,7 @@ function AssessmentPanel() {
                 className="absolute inset-x-0 top-0 cursor-pointer rounded-[22px] px-4 py-4 text-start"
                 style={{
                   background: '#FFFFFF',
-                  border: '1px solid rgba(145,103,255,0.14)',
+                  border: '1px solid rgba(143,131,255,0.14)',
                   boxShadow:
                     isFront && !sending
                       ? '0 12px 28px -16px rgba(67,54,142,0.28)'
@@ -397,13 +397,13 @@ function AssessmentPanel() {
                   if (isFront && !sending) advance()
                 }}
               >
-                <p className="text-[15px] font-bold text-[#9167ff]">
+                <p className="text-[15px] font-bold text-[#8f83ff]">
                   {t(`stages.services.assessment.cards.${card.id}.title`)}
                 </p>
                 <p className="mt-2 text-[12px] leading-relaxed text-[#43368e]">
                   {t(`stages.services.assessment.cards.${card.id}.desc`)}
                 </p>
-                <p className="mt-3 text-[11px] font-medium text-[#9167ff]">
+                <p className="mt-3 text-[11px] font-medium text-[#8f83ff]">
                   {t('stages.services.assessment.minutes', {
                     count: card.minutes,
                   })}{' '}
@@ -425,7 +425,7 @@ function AssessmentPanel() {
               style={{
                 width: i === front ? 18 : 6,
                 background:
-                  i === front ? '#9167ff' : 'rgba(145,103,255,0.28)',
+                  i === front ? '#8f83ff' : 'rgba(143,131,255,0.28)',
                 transition: 'width 0.3s ease, background 0.3s ease',
               }}
               aria-hidden
@@ -454,23 +454,23 @@ function CourseTopicCard({
       className="w-[250px] shrink-0 rounded-[22px] px-3.5 py-3.5 text-start"
       style={{
         background: '#FFFFFF',
-        border: '1px solid rgba(145,103,255,0.14)',
+        border: '1px solid rgba(143,131,255,0.14)',
         boxShadow: '0 10px 24px -14px rgba(67,54,142,0.24)',
       }}
     >
-      <p className="text-[13px] font-bold text-[#9167ff]">
+      <p className="text-[13px] font-bold text-[#8f83ff]">
         {t(`stages.services.courses.cards.${card.id}.title`)}
       </p>
       <p className="mt-1.5 text-[11px] leading-snug text-[#43368e]">
         {t(`stages.services.courses.cards.${card.id}.desc`)}
       </p>
-      <div className="mt-3 h-1 overflow-hidden rounded-full bg-[#9167ff]/15">
+      <div className="mt-3 h-1 overflow-hidden rounded-full bg-[#8f83ff]/15">
         <div
-          className="h-full rounded-full bg-[#9167ff]"
+          className="h-full rounded-full bg-[#8f83ff]"
           style={{ width: `${progress}%` }}
         />
       </div>
-      <p className="mt-2 text-[10px] font-medium text-[#9167ff]">
+      <p className="mt-2 text-[10px] font-medium text-[#8f83ff]">
         {t('stages.services.courses.lessons', { count: card.lessons })} ·{' '}
         {t('stages.services.courses.minutes', { count: card.minutes })}
       </p>
@@ -532,7 +532,7 @@ function CoursesPanel({ active = true }: { active?: boolean }) {
   return (
     <div className="flex h-full flex-col items-center justify-center gap-2 text-center">
       <motion.h2
-        className="shrink-0 px-5 text-[24px] font-bold text-[#9167ff]"
+        className="shrink-0 px-5 text-[24px] font-bold text-[#8f83ff]"
         {...enter(14, 0)}
       >
         {t('stages.services.courses.title')}
@@ -695,10 +695,10 @@ function CompanionPanel({ active }: { active: boolean }) {
         alt={t('brand')}
         className="h-9 w-auto select-none"
       />
-      <span className="rounded-full bg-[#9167ff]/12 px-2.5 py-1 text-[10px] font-medium text-[#9167ff]">
+      <span className="rounded-full bg-[#8f83ff]/12 px-2.5 py-1 text-[10px] font-medium text-[#8f83ff]">
         {t('stages.services.companion.badge')}
       </span>
-      <h2 className="text-[24px] font-bold text-[#9167ff]">
+      <h2 className="text-[24px] font-bold text-[#8f83ff]">
         {t('stages.services.companion.title')}
       </h2>
       <p className="max-w-[300px] text-[13px] leading-relaxed text-[#43368e]">
@@ -725,7 +725,7 @@ function CompanionPanel({ active }: { active: boolean }) {
           >
             <div
               className="flex h-5 w-5 shrink-0 items-center justify-center overflow-hidden rounded-full"
-              style={{ background: '#9167ff' }}
+              style={{ background: '#8f83ff' }}
             >
               <NasouhAiLogo
                 variant="white"
@@ -736,7 +736,7 @@ function CompanionPanel({ active }: { active: boolean }) {
               {[0, 1, 2].map((i) => (
                 <motion.span
                   key={i}
-                  className="h-1 w-1 rounded-full bg-[#9167ff]"
+                  className="h-1 w-1 rounded-full bg-[#8f83ff]"
                   animate={
                     reduced
                       ? { opacity: 0.7 }
@@ -758,7 +758,7 @@ function CompanionPanel({ active }: { active: boolean }) {
           <div className="flex w-full items-end gap-2">
             <motion.div
               className="flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-full"
-              style={{ background: '#9167ff' }}
+              style={{ background: '#8f83ff' }}
               initial={reduced ? false : { opacity: 0, scale: 0.6 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.35, ease: softSettleEase }}
@@ -771,7 +771,7 @@ function CompanionPanel({ active }: { active: boolean }) {
             </motion.div>
             <motion.p
               className="max-w-[68%] rounded-2xl rounded-br-md px-3.5 py-2.5 text-start text-[12px] leading-relaxed text-white"
-              style={{ background: '#9167ff' }}
+              style={{ background: '#8f83ff' }}
               initial={reduced ? false : { opacity: 0, scale: 0.94, y: 8 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 0.45, ease: softSettleEase }}
@@ -792,7 +792,7 @@ function CompanionPanel({ active }: { active: boolean }) {
         </span>
         <Mic
           size={16}
-          color="#9167ff"
+          color="#8f83ff"
           strokeWidth={1.75}
           className="shrink-0"
           aria-hidden

@@ -37,12 +37,12 @@ export function ProgressBars({
             className="h-1 flex-1 max-w-[48px] rounded-full"
             style={{
               background: active
-                ? '#9167ff'
+                ? '#8f83ff'
                 : blendWithAtmosphere
-                  ? 'rgba(145,103,255,0.22)'
+                  ? 'rgba(143,131,255,0.22)'
                   : 'rgba(255,255,255,0.55)',
               boxShadow: active
-                ? '0 0 0 1px rgba(145,103,255,0.35)'
+                ? '0 0 0 1px rgba(143,131,255,0.35)'
                 : 'none',
             }}
             animate={{ opacity: active ? 1 : 0.85 }}

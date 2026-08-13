@@ -22,7 +22,7 @@ const GLASS_CARD = {
   background:
     'linear-gradient(145deg, rgba(255,255,255,0.82), rgba(237,243,253,0.55))',
   border: '1px solid rgba(255,255,255,0.5)',
-  boxShadow: '0 10px 24px -14px rgba(145,103,255,0.3)',
+  boxShadow: '0 10px 24px -14px rgba(143,131,255,0.3)',
 } as const
 
 export function StageChoice({ isActive, onChoose }: StageChoiceProps) {
@@ -59,7 +59,7 @@ export function StageChoice({ isActive, onChoose }: StageChoiceProps) {
       <div className="absolute inset-x-0 top-[calc(13%+4.25rem)] bottom-0 z-10 flex flex-col px-5 pb-4">
         <div className="flex min-h-0 flex-1 flex-col justify-center gap-2.5">
           <motion.h2
-            className="mb-1 text-center text-[23px] font-bold leading-snug text-[#9167ff]"
+            className="mb-1 text-center text-[23px] font-bold leading-snug text-[#8f83ff]"
             initial={reduced ? false : { opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, ease: softEase, delay: reduced ? 0 : 0.06 }}
@@ -88,7 +88,7 @@ export function StageChoice({ isActive, onChoose }: StageChoiceProps) {
 
             {featured ? (
               <span className="flex shrink-0 flex-col items-center gap-0.5">
-                <span className="text-[10px] font-normal text-[#9167ff]/75">
+                <span className="text-[10px] font-normal text-[#8f83ff]/75">
                   {t(`stages.choice.options.${key}.desc`)}
                 </span>
                 <NasouhAiLogo
@@ -99,7 +99,7 @@ export function StageChoice({ isActive, onChoose }: StageChoiceProps) {
             ) : (
               <span
                 dir={isRtl ? 'rtl' : 'ltr'}
-                className="flex shrink-0 items-center gap-1 text-[11px] font-normal text-[#9167ff]/70"
+                className="flex shrink-0 items-center gap-1 text-[11px] font-normal text-[#8f83ff]/70"
               >
                 {t(`stages.choice.options.${key}.desc`)}
                 <span aria-hidden className="text-[14px] leading-none">
@@ -116,7 +116,7 @@ export function StageChoice({ isActive, onChoose }: StageChoiceProps) {
             type="button"
             dir={isRtl ? 'rtl' : 'ltr'}
             onClick={() => onChoose('home', 'explore')}
-            className="mt-2 flex w-full items-center justify-end gap-1 px-4 text-[11px] font-normal text-[#9167ff]/70"
+            className="mt-2 flex w-full items-center justify-end gap-1 px-4 text-[11px] font-normal text-[#8f83ff]/70"
             initial={reduced ? false : { opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: reduced ? 0 : 0.42, duration: 0.4 }}

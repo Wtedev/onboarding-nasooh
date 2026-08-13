@@ -126,7 +126,7 @@ export function MoodCardVisual({
       className="pointer-events-none block select-none"
       role="img"
       aria-label={feeling}
-      style={{ filter: 'drop-shadow(0 14px 22px rgba(145,103,255,0.16))' }}
+      style={{ filter: 'drop-shadow(0 14px 22px rgba(143,131,255,0.16))' }}
     >
       <defs>
         <radialGradient id={gid} cx={glowCx} cy="42%" r="55%">

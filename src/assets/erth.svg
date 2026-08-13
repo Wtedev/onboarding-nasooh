@@ -5,8 +5,8 @@
       <stop offset="0" stop-color="#ab8eff"/>
       <stop offset=".03" stop-color="#aa8cff"/>
       <stop offset=".36" stop-color="#a077ff"/>
-      <stop offset=".68" stop-color="#9a6bff"/>
-      <stop offset="1" stop-color="#9867ff"/>
+      <stop offset=".68" stop-color="#8f83ff"/>
+      <stop offset="1" stop-color="#8f83ff"/>
     </linearGradient>
     <linearGradient id="linear-gradient-2" x1="0" y1="1431.56" x2="474.95" y2="1431.56" xlink:href="#linear-gradient"/>
     <linearGradient id="linear-gradient-3" x1="211.94" y1="292.37" x2="832.74" y2="292.37" xlink:href="#linear-gradient"/>

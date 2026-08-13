@@ -27,7 +27,7 @@
 @theme {
   --color-nasouh-bg: #edf3fd;
   --color-nasouh-ink: #1f2125;
-  --color-nasouh-purple: #9167ff;
+  --color-nasouh-purple: #8f83ff;
   --color-nasouh-indigo: #7b52f0;
   --color-nasouh-teal: #63d9f4;
   --color-nasouh-pink: #ff86b7;
@@ -82,7 +82,7 @@ html[lang='ar'] body {
 }
 
 :focus-visible {
-  outline: 2px solid #9167ff;
+  outline: 2px solid #8f83ff;
   outline-offset: 3px;
 }
 
@@ -122,11 +122,11 @@ html[lang='ar'] body {
   flex-direction: column;
 }
 
-/* CTA — #9167ff, very soft lighter wash, no frames */
+/* CTA — #8f83ff, very soft lighter wash, no frames */
 .nasouh-cta {
   position: relative;
   overflow: hidden;
-  background: #9167ff;
+  background: #8f83ff;
   border: none;
   box-shadow: none;
 }

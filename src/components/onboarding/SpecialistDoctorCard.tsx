@@ -70,7 +70,7 @@ export function SpecialistDoctorCard({
         background:
           'linear-gradient(145deg, rgba(255,255,255,0.96), rgba(237,243,253,0.92))',
         border: '1px solid rgba(255,255,255,0.7)',
-        boxShadow: '0 10px 24px -14px rgba(145,103,255,0.3)',
+        boxShadow: '0 10px 24px -14px rgba(143,131,255,0.3)',
       }}
     >
       <motion.div
@@ -80,7 +80,7 @@ export function SpecialistDoctorCard({
         <div
           className="relative h-[52px] w-[52px] shrink-0 overflow-hidden rounded-full"
           style={{
-            background: 'linear-gradient(145deg,#71C8F6,#9167ff)',
+            background: 'linear-gradient(145deg,#71C8F6,#8f83ff)',
             boxShadow: 'inset 0 0 0 2px rgba(255,255,255,0.65)',
           }}
         >
@@ -93,7 +93,7 @@ export function SpecialistDoctorCard({
         </div>
 
         <div className="min-w-0 flex-1 text-start">
-          <p className="truncate text-[15px] font-bold leading-tight text-[#9167ff]">
+          <p className="truncate text-[15px] font-bold leading-tight text-[#8f83ff]">
             {name}
           </p>
           <p className="mt-0.5 text-[9px] leading-snug text-[#43368e]">
@@ -128,7 +128,7 @@ export function SpecialistDoctorCard({
         >
           {isRtl ? (
             <>
-              <span className="text-[11px] font-bold leading-none text-[#9167ff]">
+              <span className="text-[11px] font-bold leading-none text-[#8f83ff]">
                 {price}
               </span>
               <img
@@ -151,7 +151,7 @@ export function SpecialistDoctorCard({
                 draggable={false}
                 aria-hidden
               />
-              <span className="text-[11px] font-bold leading-none text-[#9167ff]">
+              <span className="text-[11px] font-bold leading-none text-[#8f83ff]">
                 {price}
               </span>
               <span className="text-[8px] leading-none text-[#43368e]">
@@ -209,7 +209,7 @@ function Stat({
         aria-hidden
       />
       <span className="text-[7px] font-bold leading-tight text-[#43368e]">{label}</span>
-      <span className="text-[8px] font-normal leading-tight text-[#9167ff]">
+      <span className="text-[8px] font-normal leading-tight text-[#8f83ff]">
         {value}
       </span>
     </div>

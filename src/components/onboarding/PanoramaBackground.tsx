@@ -22,13 +22,13 @@ const ORBS: {
 }[] = [
   // ——— Right cluster (slide 1) ———
   { left: '88%', top: '16%', size: '46%', color: 'rgba(255,255,255,0.85)' },
-  { left: '82%', top: '40%', size: '52%', color: 'rgba(145,103,255,0.42)' },
+  { left: '82%', top: '40%', size: '52%', color: 'rgba(143,131,255,0.42)' },
   { left: '76%', top: '58%', size: '40%', color: 'rgba(99,217,244,0.38)' },
   // ——— Mid-right ———
   { left: '64%', top: '20%', size: '54%', color: 'rgba(255,255,255,0.7)' },
   { left: '58%', top: '64%', size: '48%', color: 'rgba(169,139,250,0.4)' },
   // ——— Center ———
-  { left: '48%', top: '68%', size: '44%', color: 'rgba(145,103,255,0.36)' },
+  { left: '48%', top: '68%', size: '44%', color: 'rgba(143,131,255,0.36)' },
   { left: '42%', top: '26%', size: '42%', color: 'rgba(113,200,246,0.36)' },
   // ——— Mid-left ———
   { left: '30%', top: '56%', size: '50%', color: 'rgba(169,139,250,0.38)' },
@@ -36,7 +36,7 @@ const ORBS: {
   // ——— Far left (later slides) ———
   { left: '12%', top: '46%', size: '54%', color: 'rgba(99,217,244,0.4)' },
   { left: '6%', top: '20%', size: '40%', color: 'rgba(255,255,255,0.6)' },
-  { left: '4%', top: '70%', size: '36%', color: 'rgba(145,103,255,0.32)' },
+  { left: '4%', top: '70%', size: '36%', color: 'rgba(143,131,255,0.32)' },
 ]
 
 /**

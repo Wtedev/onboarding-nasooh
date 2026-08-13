@@ -50,7 +50,7 @@ function AppShell() {
 
   return (
     <main className="nasouh-app relative flex h-[100dvh] min-h-[100dvh] w-full items-center justify-center gap-3 overflow-hidden px-2">
-      <div className="relative h-[100dvh] w-full max-w-[430px] overflow-hidden sm:h-[min(100dvh,920px)] sm:max-h-[920px] sm:rounded-[28px] sm:shadow-[0_24px_60px_-28px_rgba(145,103,255,0.35)]">
+      <div className="relative h-[100dvh] w-full max-w-[430px] overflow-hidden sm:h-[min(100dvh,920px)] sm:max-h-[920px] sm:rounded-[28px] sm:shadow-[0_24px_60px_-28px_rgba(143,131,255,0.35)]">
         {view === 'onboarding' && (
           <OnboardingFlow
             onComplete={(dest) => finishTo(dest)}

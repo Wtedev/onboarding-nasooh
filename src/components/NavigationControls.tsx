@@ -40,9 +40,9 @@ export function NavigationControls({
             type="button"
             onClick={onSecondary}
             aria-label={t('exploreAria')}
-            className="inline-flex h-[42px] w-[64%] max-w-[220px] items-center justify-center rounded-full text-[13px] font-medium text-[#9167ff]/80"
+            className="inline-flex h-[42px] w-[64%] max-w-[220px] items-center justify-center rounded-full text-[13px] font-medium text-[#8f83ff]/80"
             style={{
-              background: 'rgba(145,103,255,0.1)',
+              background: 'rgba(143,131,255,0.1)',
               border: 'none',
             }}
             whileTap={{ scale: 0.98 }}

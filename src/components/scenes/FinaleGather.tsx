@@ -79,9 +79,9 @@ export function FinaleGather({
           type="button"
           onClick={onSecondary}
           aria-label={t('exploreAria')}
-          className="inline-flex h-[44px] w-[70%] max-w-[240px] items-center justify-center rounded-full text-[13px] font-medium text-[#9167ff]/80"
+          className="inline-flex h-[44px] w-[70%] max-w-[240px] items-center justify-center rounded-full text-[13px] font-medium text-[#8f83ff]/80"
           style={{
-            background: 'rgba(145,103,255,0.1)',
+            background: 'rgba(143,131,255,0.1)',
             border: 'none',
             fontFamily: "'Lama Sans', sans-serif",
             fontWeight: 400,

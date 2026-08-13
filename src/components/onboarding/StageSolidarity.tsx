@@ -201,7 +201,7 @@ export function StageSolidarity({ isActive, onContinue }: StageSolidarityProps) 
 
       <div className="z-10 flex shrink-0 flex-col items-center gap-1 px-6 pb-0 text-center">
         <motion.h2
-          className="text-[23px] font-bold leading-snug text-[#9167ff]"
+          className="text-[23px] font-bold leading-snug text-[#8f83ff]"
           initial={reduced ? false : { opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: softEase, delay: reduced ? 0 : 0.15 }}

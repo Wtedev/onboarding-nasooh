@@ -56,7 +56,7 @@ export function SceneChrome({
           key={`desc-${enterKey}`}
           className="mx-auto mt-1.5 max-w-[320px] text-[16px] font-medium leading-[1.4] short:text-[15px]"
           style={{
-            color: '#9167ff',
+            color: '#8f83ff',
             fontFamily: "'Lama Sans', sans-serif",
           }}
           initial={reduced || !showFull ? false : { opacity: 0, y: 8 }}

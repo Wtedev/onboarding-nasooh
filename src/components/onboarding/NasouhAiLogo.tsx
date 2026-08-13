@@ -29,9 +29,9 @@ export function NasouhAiLogo({
   alt = '',
 }: NasouhAiLogoProps) {
   const isWhite = variant === 'white'
-  const markFill = isWhite ? '#fff' : '#9167ff'
+  const markFill = isWhite ? '#fff' : '#8f83ff'
   const plusFill = isWhite ? '#fff' : '#1f2125'
-  const aiFill = isWhite ? '#fff' : '#9167ff'
+  const aiFill = isWhite ? '#fff' : '#8f83ff'
 
   return (
     <svg

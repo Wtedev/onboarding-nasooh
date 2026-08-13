@@ -37,10 +37,10 @@ export function ProgressIndicator({
               style={
                 active
                   ? {
-                      background: 'linear-gradient(90deg, #9a73ff 0%, #9167ff 100%)',
+                      background: 'linear-gradient(90deg, #8f83ff 0%, #8f83ff 100%)',
                     }
                   : {
-                      background: 'rgba(145,103,255,0.18)',
+                      background: 'rgba(143,131,255,0.18)',
                     }
               }
               animate={{ width: active ? 22 : 7 }}

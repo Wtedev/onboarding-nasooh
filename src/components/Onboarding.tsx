@@ -120,7 +120,7 @@ export function Onboarding() {
             <div
               className="mb-6 h-14 w-14 rounded-full"
               style={{
-                background: 'linear-gradient(145deg, #a884ff, #9167ff)',
+                background: 'linear-gradient(145deg, #8f83ff, #8f83ff)',
               }}
               aria-hidden="true"
             />

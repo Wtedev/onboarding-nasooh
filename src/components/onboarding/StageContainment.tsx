@@ -339,8 +339,8 @@ export function StageContainment({
   const showCursor = (phase === 'line1' || phase === 'line2') && !reduced
   const softIn = { opacity: 1, y: 0, filter: 'blur(0px)' } as const
   const headlineStyle = {
-    color: '#9167ff',
-    WebkitTextFillColor: '#9167ff',
+    color: '#8f83ff',
+    WebkitTextFillColor: '#8f83ff',
   } as const
   // Headline size: 20px — tight two-line lockup under the logo
   const headlineClass =
@@ -449,7 +449,7 @@ export function StageContainment({
                     <span
                       className="nasouh-caret ms-0.5 inline-block h-[14px] w-[2px] translate-y-0.5 align-middle"
                       style={{
-                        background: '#9167ff',
+                        background: '#8f83ff',
                         WebkitTextFillColor: 'initial',
                       }}
                     />
@@ -465,7 +465,7 @@ export function StageContainment({
                     <span
                       className="nasouh-caret ms-0.5 inline-block h-[14px] w-[2px] translate-y-0.5 align-middle"
                       style={{
-                        background: '#9167ff',
+                        background: '#8f83ff',
                         WebkitTextFillColor: 'initial',
                       }}
                     />

@@ -44,7 +44,7 @@ export function PlaceholderScreen({ onBackToStart }: PlaceholderScreenProps) {
       <motion.button
         type="button"
         onClick={onBackToStart}
-        className="z-10 mt-7 text-[13px] font-medium text-[#9167ff]"
+        className="z-10 mt-7 text-[13px] font-medium text-[#8f83ff]"
         initial={reduced ? false : { opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.4, delay: reduced ? 0 : 0.25 }}
