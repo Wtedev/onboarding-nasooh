@@ -2,6 +2,8 @@
 
 نموذج واجهة onboarding لتطبيق نصوح (عرض تصميمي فقط).
 
+فرع العمل الحالي: **`preview`** — أي push عليه يحدّث رابط العرض.
+
 ## Demo
 
 **https://wtedev.github.io/onboarding-nasooh/**
