@@ -14,14 +14,6 @@ export const SERVICE_TABS: ServiceTab[] = [
   'companion',
 ]
 
-export const CHOICE_DESTINATIONS: Record<string, DestinationId> = {
-  vent: 'companion',
-  calm: 'calm',
-  understand: 'assessment',
-  specialist: 'sessions',
-  explore: 'home',
-}
-
 export const ASSESSMENT_CARDS = [
   { id: 'anxiety', minutes: 3, questions: 7 },
   { id: 'mood', minutes: 4, questions: 9 },

@@ -11,19 +11,17 @@ import { PanoramaBackground } from './PanoramaBackground'
 import { StageContainment } from './StageContainment'
 import { StageSolidarity } from './StageSolidarity'
 import { ServiceSlide } from './StageServices'
-import { StageChoice } from './StageChoice'
 
 interface OnboardingFlowProps {
   onComplete: (destination: DestinationId, choiceKey?: string) => void
   onSkip: () => void
 }
 
-/** containment → solidarity → 4 service slides → choice */
-const STAGE_COUNT = 2 + SERVICE_TABS.length + 1
-const CHOICE_INDEX = STAGE_COUNT - 1
+/** containment → solidarity → 4 service slides */
+const STAGE_COUNT = 2 + SERVICE_TABS.length
 const SWIPE_THRESHOLD = 56
 /**
- * Same mirrored-chevron trick as the choice slide: pick one literal glyph and
+ * Same mirrored-chevron trick: pick one literal glyph and
  * let the browser's bidi mirroring flip it per `dir`, instead of branching on
  * `isRtl` (which would double-flip and point the wrong way).
  */
@@ -45,9 +43,7 @@ export function OnboardingFlow({ onComplete, onSkip }: OnboardingFlowProps) {
   /** On slide 1, the skip link waits for the "Tour Nasouh" CTA to show up first */
   const [slide1CtaVisible, setSlide1CtaVisible] = useState(false)
   const hideFooter =
-    stage === CHOICE_INDEX ||
-    serviceTabAt(stage) === 'companion' ||
-    (stage === 0 && !slide1CtaVisible)
+    serviceTabAt(stage) === 'companion' || (stage === 0 && !slide1CtaVisible)
   const [viewportW, setViewportW] = useState(0)
   const viewportRef = useRef<HTMLDivElement>(null)
   const touchStartX = useRef<number | null>(null)
@@ -72,21 +68,13 @@ export function OnboardingFlow({ onComplete, onSkip }: OnboardingFlowProps) {
     setStage((s) => Math.max(0, s - 1))
   }, [])
 
-  const handleChoose = useCallback(
-    (destination: DestinationId, choiceKey: string) => {
-      onComplete(destination, choiceKey)
-    },
-    [onComplete],
-  )
-
   const onPointerDown = (clientX: number, target: EventTarget | null) => {
-    if (stage === CHOICE_INDEX) return
     if (target instanceof Element && target.closest('button,a,[role="tab"]')) return
     touchStartX.current = clientX
   }
 
   const onPointerUp = (clientX: number) => {
-    if (touchStartX.current == null || stage === CHOICE_INDEX) {
+    if (touchStartX.current == null) {
       touchStartX.current = null
       return
     }
@@ -130,12 +118,9 @@ export function OnboardingFlow({ onComplete, onSkip }: OnboardingFlowProps) {
         duration={duration}
       />
 
-      {/* Fixed chrome — hidden on choice (logo lives in the stage) */}
+      {/* Fixed chrome */}
       <header
-        className={`relative z-20 flex items-center gap-2 bg-transparent px-4 pb-2 pt-1 ${
-          stage === CHOICE_INDEX ? 'pointer-events-none invisible h-0 overflow-hidden p-0' : ''
-        }`}
-        aria-hidden={stage === CHOICE_INDEX}
+        className="relative z-20 flex items-center gap-2 bg-transparent px-4 pb-2 pt-1"
       >
         {/* Back keeps its box on slide 1 so the progress bar never shifts */}
         <button
@@ -152,9 +137,8 @@ export function OnboardingFlow({ onComplete, onSkip }: OnboardingFlowProps) {
           {BACK_CHEVRON} {t('back')}
         </button>
         <div className="min-w-0 flex-1">
-          {/* Choice slide hides this bar entirely, so it gets no slot of its own */}
           <ProgressBars
-            total={CHOICE_INDEX}
+            total={STAGE_COUNT}
             current={stage}
             blendWithAtmosphere={stage === 0}
           />
@@ -230,12 +214,11 @@ export function OnboardingFlow({ onComplete, onSkip }: OnboardingFlowProps) {
                   <ServiceSlide
                     tab={tab}
                     isActive={active}
-                    onContinue={goNext}
+                    onContinue={
+                      tab === 'companion' ? () => onComplete('companion') : goNext
+                    }
                     isFinalService={tab === 'companion'}
                   />
-                )}
-                {i === CHOICE_INDEX && (
-                  <StageChoice isActive={active} onChoose={handleChoose} />
                 )}
               </div>
             )
@@ -243,7 +226,7 @@ export function OnboardingFlow({ onComplete, onSkip }: OnboardingFlowProps) {
         </motion.div>
       </div>
 
-      {/* Skip — hidden on choice (explore link is the exit path there) and on the Nasouh AI page */}
+      {/* Skip — hidden on slide 1 until CTA, and on the Nasouh AI page */}
       <footer
         className={`relative z-20 flex shrink-0 justify-center bg-transparent px-6 pb-0 pt-1.5 ${
           hideFooter ? 'pointer-events-none invisible h-0 overflow-hidden p-0' : ''

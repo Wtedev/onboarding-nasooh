@@ -16,7 +16,7 @@ interface ServiceSlideProps {
   tab: ServiceTab
   isActive: boolean
   onContinue: () => void
-  /** Last service slide uses the “choose your start” CTA */
+  /** Last service slide uses the start-with-Nasouh CTA */
   isFinalService?: boolean
 }
 

@@ -52,12 +52,6 @@ async function goToStage(
       await screen.findByRole('button', { name: /إبدأ مع نصوح|Start with Nasouh/i })
     }
   }
-  if (target >= 6) {
-    await user.click(
-      screen.getByRole('button', { name: /إبدأ مع نصوح|Start with Nasouh/i }),
-    )
-    await screen.findByRole('button', { name: /أبغى أفضفض|I want to vent/i })
-  }
 }
 
 describe('OnboardingFlow', () => {
@@ -117,55 +111,15 @@ describe('OnboardingFlow', () => {
     ).toBeInTheDocument()
   })
 
-  it('routes vent choice to companion', async () => {
+  it('finishes on the Nasouh companion CTA', async () => {
     const user = userEvent.setup()
     const onComplete = vi.fn()
     render(<OnboardingFlow onComplete={onComplete} onSkip={() => {}} />)
-    await goToStage(user, 6)
-    await user.click(screen.getByRole('button', { name: /أبغى أفضفض|I want to vent/i }))
-    expect(onComplete).toHaveBeenCalledWith('companion', 'vent')
-  })
-
-  it('routes calm choice to calm', async () => {
-    const user = userEvent.setup()
-    const onComplete = vi.fn()
-    render(<OnboardingFlow onComplete={onComplete} onSkip={() => {}} />)
-    await goToStage(user, 6)
+    await goToStage(user, 5)
     await user.click(
-      screen.getByRole('button', { name: /أبغى أهدّي|settle my feelings/i }),
+      screen.getByRole('button', { name: /إبدأ مع نصوح|Start with Nasouh/i }),
     )
-    expect(onComplete).toHaveBeenCalledWith('calm', 'calm')
-  })
-
-  it('routes understand to assessment', async () => {
-    const user = userEvent.setup()
-    const onComplete = vi.fn()
-    render(<OnboardingFlow onComplete={onComplete} onSkip={() => {}} />)
-    await goToStage(user, 6)
-    await user.click(
-      screen.getByRole('button', { name: /أبغى أفهم|I want to understand/i }),
-    )
-    expect(onComplete).toHaveBeenCalledWith('assessment', 'understand')
-  })
-
-  it('routes specialist to sessions', async () => {
-    const user = userEvent.setup()
-    const onComplete = vi.fn()
-    render(<OnboardingFlow onComplete={onComplete} onSkip={() => {}} />)
-    await goToStage(user, 6)
-    await user.click(
-      screen.getByRole('button', { name: /شخص حقيقي|real person/i }),
-    )
-    expect(onComplete).toHaveBeenCalledWith('sessions', 'specialist')
-  })
-
-  it('explore goes home', async () => {
-    const user = userEvent.setup()
-    const onComplete = vi.fn()
-    render(<OnboardingFlow onComplete={onComplete} onSkip={() => {}} />)
-    await goToStage(user, 6)
-    await user.click(screen.getByRole('button', { name: /استكشاف|explore/i }))
-    expect(onComplete).toHaveBeenCalledWith('home', 'explore')
+    expect(onComplete).toHaveBeenCalledWith('companion')
   })
 
   it('does not request mic or camera permissions', () => {
