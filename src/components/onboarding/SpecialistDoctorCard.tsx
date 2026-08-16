@@ -53,7 +53,7 @@ export function SpecialistDoctorCard({
   const fade = (extraDelay: number) =>
     animateContent && !reduced
       ? {
-          initial: { opacity: 0, y: 8, scale: 0.96 },
+          initial: { opacity: 0, y: 8, scale: 0.96 } as const,
           animate: { opacity: 1, y: 0, scale: 1 },
           transition: {
             duration: 0.4,
@@ -73,10 +73,7 @@ export function SpecialistDoctorCard({
         boxShadow: '0 10px 24px -14px rgba(143,131,255,0.3)',
       }}
     >
-      <motion.div
-        className="flex items-start gap-3"
-        {...fade(0)}
-      >
+      <motion.div className="flex items-start gap-3" {...fade(0)}>
         <div
           className="relative h-[52px] w-[52px] shrink-0 overflow-hidden rounded-full"
           style={{
@@ -104,12 +101,31 @@ export function SpecialistDoctorCard({
         {/* Fixed LTR order so the star always sits on the left of the number,
             regardless of app language */}
         <div dir="ltr" className="flex shrink-0 items-center gap-1">
-          <img
+          <motion.img
             src={iconStar}
             alt=""
-            className="h-3 w-3 object-contain"
+            className="h-3 w-3 origin-center object-contain"
             draggable={false}
             aria-hidden
+            animate={
+              reduced
+                ? undefined
+                : {
+                    rotate: [0, -8, 8, -4, 0],
+                    scale: [1, 1.08, 1],
+                    y: [0, -1, 0],
+                  }
+            }
+            transition={
+              reduced
+                ? undefined
+                : {
+                    duration: 0.9,
+                    repeat: Infinity,
+                    repeatDelay: 1.4,
+                    ease: 'easeInOut',
+                  }
+            }
           />
           <span className="text-[12px] font-semibold text-[#43368e]">
             {rating}

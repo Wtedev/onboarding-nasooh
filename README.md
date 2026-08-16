@@ -1,15 +1,19 @@
 # نصوح — Onboarding
 
-نموذج واجهة onboarding لتطبيق نصوح (عرض تصميمي فقط).
+نموذج واجهة onboarding لتطبيق نصوح
 
 ## Demo
 
 | الفرع | الرابط |
-| --- | --- |
-| `main` | https://wtedev.github.io/onboarding-nasooh/ |
-| `preview` | https://wtedev.github.io/onboarding-nasooh/preview/ |
+| ----- | ------ |
 
-فرع العمل الحالي: **`preview`** — أي push عليه يحدّث رابط الـ preview فقط.
+## قبل التعديلات
+
+| `main` | https://wtedev.github.io/onboarding-nasooh/ |
+
+## بعد التعديلات
+
+| `preview` | https://wtedev.github.io/onboarding-nasooh/preview/ |
 
 ## Local
 
